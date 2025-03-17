@@ -35,20 +35,20 @@ export const Hero = () => {
           className={`transition-all absolute duration-1000 delay-500 flex flex-col items-center justify-center h-full ${showContent ? "opacity-100 translate-y-2" : "opacity-0 translate-y-5"}`}
         >
           <div className="gap-0">
-          <h1 className="text-5xl md:text-[64px] font-semibold text-white custom-hero-title-shadow">
+          <h1 className="text-5xl md:text-[48px] font-semibold text-white custom-hero-title-shadow">
           PCU's
           </h1>
           <h1 className="text-5xl md:text-[72px] font-semibold text-white custom-hero-title-shadow">
             Ideathon 2.0
           </h1>
-            <h1 className="text-5xl md:text-[64px] font-semibold text-white custom-hero-title-shadow">
+            <h1 className="text-5xl md:text-[48px] font-semibold text-white custom-hero-title-shadow">
             2K25
           </h1>
           </div>
           <p className="text-lg md:text-xl text-white tracking-[0.2px] mt-5 max-w-xl custom-text-shadow">
             PCU's Ideathon 2.0 is a platform for students to showcase their innovative ideas and solutions to real-world problems.
           </p>
-          <div className="mt-5">
+          <div className="pt-16">
             <ModernAnimatedButtonVariant1 />
           </div>
         </div>

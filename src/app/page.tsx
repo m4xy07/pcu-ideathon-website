@@ -2,8 +2,9 @@ import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { LogoTicker } from "@/sections/LogoTicker";
 import { Footer } from "@/sections/Footer";
-import Team from "@/sections/Team";
+import Team from "@/sections/Themes";
 import { CallToAction } from "@/sections/CallToAction";
+import ScrollSec from "@/sections/ScrollSec";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero/> 
       <LogoTicker />
       <Team/>
+      <ScrollSec/>
       {/* <CallToAction/> */}
       <Footer />
     </>
