@@ -6,28 +6,15 @@ import deepfaceLogo from '@/assets/deepface-logo.png';
 import mongodbLogo from '@/assets/mongodb-logo.png';
 import githubLogo from '@/assets/github-logo.png';
 import {motion} from 'framer-motion';
+import Image from 'next/image';
 
 export const LogoTicker = () => {
   return (
   <section className='py-20 md:py-24'>
     <div className="container">
-      <div className='flex items-center gap-5'>
-        <div className='flex-1 md:flex-none'>
-          <h2>Built on</h2>
-        </div>
-      <div className='flex flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]'>
-      <motion.div 
-      initial={{translateX: "-50%"}}
-      animate={{translateX: "0"}}
-      transition={{
-        repeat: Infinity,
-        duration: 30,
-        ease: "linear",
-      }}
-      className='flex flex-none gap-24 pr-14 -translate-x-1/2'>
-        {[pythonLogo, raspberryLogo, opencvLogo, deepfaceLogo, mongodbLogo, githubLogo, pythonLogo, raspberryLogo, opencvLogo, deepfaceLogo, mongodbLogo, githubLogo].map((logo) => (<img src={logo.src} key={logo.src} className="h-[4.4rem] w-full"/>))}
-      </motion.div>
-      </div>
+      <div className='flex flex-col items-center gap-6'>
+          <h2>Associated with</h2>
+          <Image src="/images/IIC_Logo.png" alt="IIC Logo" width={1920} height={1080} className="w-36 h-16" />
       </div>
     </div>
 

@@ -34,11 +34,19 @@ export const Hero = () => {
         <div
           className={`transition-all absolute duration-1000 delay-500 flex flex-col items-center justify-center h-full ${showContent ? "opacity-100 translate-y-2" : "opacity-0 translate-y-5"}`}
         >
-          <h1 className="text-7xl md:text-[168px] md:leading-none font-semibold tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text">
-            EcoCred
+          <div className="gap-0">
+          <h1 className="text-5xl md:text-[64px] font-semibold text-white custom-hero-title-shadow">
+          PCU's
           </h1>
-          <p className="text-lg md:text-xl text-white/70 mt-5 max-w-xl">
-            Incentivizing Recycling Through Technology
+          <h1 className="text-5xl md:text-[72px] font-semibold text-white custom-hero-title-shadow">
+            Ideathon 2.0
+          </h1>
+            <h1 className="text-5xl md:text-[64px] font-semibold text-white custom-hero-title-shadow">
+            2K25
+          </h1>
+          </div>
+          <p className="text-lg md:text-xl text-white tracking-[0.2px] mt-5 max-w-xl custom-text-shadow">
+            PCU's Ideathon 2.0 is a platform for students to showcase their innovative ideas and solutions to real-world problems.
           </p>
           <div className="mt-5">
             <ModernAnimatedButtonVariant1 />
