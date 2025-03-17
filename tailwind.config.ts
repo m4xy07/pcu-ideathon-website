@@ -26,6 +26,9 @@ const config: Config = {
     },
     extend: {},
   },
+  safelist: [
+    'group-[data-expanded]:rotate-180' // Ensures Tailwind includes this class
+  ],
   plugins: [],
 };
 export default config;

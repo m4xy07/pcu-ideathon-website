@@ -68,20 +68,22 @@ export default function ModernAnimatedButtonVariant1() {
   }, []);
 
   return (
-    <button
-      className="rotation-animation conic-gradient transform-gpu cursor-pointer rounded-full p-px shadow-[0_0_20px_0_rgba(245,48,107,0.1)] hue-rotate-[190deg] invert transition-all hover:bg-[#782a2b] hover:shadow-[0_0_20px_3px_rgba(245,49,108,.2)] dark:hue-rotate-0 dark:invert-0"
-      style={{
-        background:
-          "conic-gradient(from calc(var(--r2) - 80deg) at var(--x) 15px, transparent 0, #eca5a7 20%, transparent 25%), #452324",
-      }}
-      type="button"
-    >
-      <span className="pointer-events-none flex h-7 flex-nowrap items-center gap-2 rounded-full bg-[#120d0e] px-3 py-1 font-normal text-[#fff] text-sm tracking-normal">
-        <span>Register Today</span>
-        <span className="h-5/6 w-px bg-[#434345]" />
-        <span className="text-[#9C9C9D] ">Make your mark</span>
-        <MoveRight className="text-[#9C9C9D] w-4 h-4" />
-      </span>
-    </button>
+    <a href="https://unstop.com/p/ideathon-20-2025-pimpri-chinchwad-university-maharashtra-1433066?lb=9PcWzBfl" target="_blank" rel="noopener noreferrer">
+      <button
+        className="rotation-animation conic-gradient transform-gpu cursor-pointer rounded-full p-px shadow-[0_0_20px_0_rgba(245,48,107,0.1)] hue-rotate-[190deg] invert transition-all hover:bg-[#782a2b] hover:shadow-[0_0_20px_3px_rgba(245,49,108,.2)] w-[275px] md:w-fit dark:hue-rotate-0 dark:invert-0 "
+        style={{
+          background:
+            "conic-gradient(from calc(var(--r2) - 80deg) at var(--x) 15px, transparent 0, #eca5a7 20%, transparent 25%), #452324",
+        }}
+        type="button"
+      >
+        <span className="pointer-events-none flex h-7 flex-nowrap items-center gap-2 rounded-full bg-[#120d0e] px-3 py-1 font-normal text-[#fff] text-sm tracking-normal">
+          <span>Register Today</span>
+          <span className="h-5/6 w-px bg-[#434345]" />
+          <span className="text-[#9C9C9D] ">Make your mark</span>
+          <MoveRight className="text-[#9C9C9D] w-4 h-4" />
+        </span>
+      </button>
+    </a>
   );
 }

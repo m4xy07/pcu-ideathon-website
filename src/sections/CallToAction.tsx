@@ -1,87 +1,37 @@
 'use client';
-import Button from "@/components/Button";
+import Button from "@/components/Buttonmain";
 import starsBg from "@/assets/stars.png";
 import gridlines from "@/assets/grid-lines.png";
 import {motion, useMotionTemplate, useMotionValue, useScroll, useTransform} from "framer-motion";
 import { RefObject, useEffect, useRef } from "react";
+import LiquidChrome from "@/components/LiquidChrome/LiquidChrome";
+import ModernAnimatedButtonVariant1 from "@/components/RaycastButton";
 
-
-const useRelativeMousePosition = (to: RefObject<HTMLElement>) => {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const updateMousePosition = (event: MouseEvent) => {
-    if(!to.current) return;
-    const {top, left} = to.current.getBoundingClientRect();
-    mouseX.set(event.x - left);
-    mouseY.set(event.y - top);
-  };
-
-  useEffect(() => {
-    window.addEventListener('mousemove', updateMousePosition);
-
-    return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-    }
-  }, []); 
-
-  return [mouseX, mouseY];
-}
 
 
 export const CallToAction = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const borderedDivRef = useRef<HTMLDivElement>(null);
-  const {scrollYProgress} = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  });
-
-  const backgroundPositionY = useTransform(scrollYProgress, [0,1], [-300, 300]);
-
-  const [mouseX, mouseY] = useRelativeMousePosition(borderedDivRef);
-
-  const maskImage = useMotionTemplate`radial-gradient(50% 50% at ${mouseX}px ${mouseY}px, black, transparent)`;
-
+  
   return (
-    <section className="py-20 md:py-24" ref={sectionRef}>
-      <div className="container">
-        <motion.div ref={borderedDivRef} className="border border-white/15 py-24 rounded-xl overflow-hidden relative group" 
-        animate={{
-          backgroundPositionX: starsBg.width,
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 60,
-          ease: "linear",
-        }}
-        style={{
-          backgroundPositionY,
-          backgroundImage: `url(${starsBg.src})`,
-        }}>
-        <div className="absolute inset-0 bg-[rgb(74,32,138)] bg-blend-overlay [mask-image:radial-gradient(50%_50%_at_50%_35%,black,transparent)] group-hover:opacity-0 transition duration-700" style={{
-          backgroundImage: `url(${gridlines.src})`,
-        }}>
-        </div>
-        <motion.div className="absolute inset-0 bg-[rgb(74,32,138)] bg-blend-overlay opacity-0 group-hover:opacity-100 transition duration-700" 
-        style={{
-          maskImage,
-          backgroundImage: `url(${gridlines.src})`,
-        }}>
-        </motion.div>
-        <div className="relative">
-        <h2 className="text-5xl md:text-6xl max-w-sm mx-auto tracking-tighter text-center font-medium">
-          Make the Earth Greener 
-        </h2>
-        <p className="text-center text-lg md:text-xl max-w-sm mx-auto text-white/70 px-4 mt-5 tracking-tight">
-          Turn Plastic into Profit with EcoCred and Earn Financial Credits!
-        </p>
-        <div className="flex justify-center mt-8">
-        <Button>Join waitlist</Button>
-        </div>
-        </div>  
-        </motion.div>
-      </div>
-    </section>
+  <section className="py-16">
+  <div className="container">
+  <div style={{ width: '100%', height: '600px', position: 'relative', borderRadius: '20px', overflow: 'hidden' }}>
+    <div className="absolute text-center justify-center mx-auto" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 2 }}>
+    <span className="text-[48px] tracking-[0.2px] font-semibold text-white custom-hero-title-shadow">
+      Innovate, Build, Win.
+    </span>
+    <div className="pt-8">
+      <ModernAnimatedButtonVariant1 />
+    </div>
+    </div>
+    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'black', opacity: 0.4, zIndex: 1 }}></div>
+    <LiquidChrome
+    baseColor={[0.35, 0.1, 0.1]}
+    speed={0.3}
+    amplitude={0.3}
+    interactive={true}
+    />
+  </div>
+  </div>
+  </section>
   );
 };

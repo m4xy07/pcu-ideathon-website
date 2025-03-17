@@ -5,6 +5,7 @@ import { Footer } from "@/sections/Footer";
 import Team from "@/sections/Themes";
 import { CallToAction } from "@/sections/CallToAction";
 import ScrollSec from "@/sections/ScrollSec";
+import Prize from "@/sections/Prize";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       <LogoTicker />
       <Team/>
       <ScrollSec/>
-      {/* <CallToAction/> */}
+      <Prize/>
+      <CallToAction/>
       <Footer />
     </>
   
