@@ -26,7 +26,7 @@ export const Header = () => {
       <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto relative">
       <div className="absolute inset-0 backdrop-blur -z-10 hidden md:block"></div>
         <div>
-          <div className=" h-[3rem] w-full inline-flex justify-center items-center ">
+          <div className=" h-[3rem] w-fit inline-flex justify-center items-center ">
           <img src={LogoIcon.src} className="h-full w-full" />
           </div>
         </div>

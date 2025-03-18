@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import Spline from "@splinetool/react-spline/next";
 
+
+
 const Team = () => {
   return (
     <section
@@ -26,10 +28,23 @@ const Team = () => {
                 Empowering Change with Innovation and Purpose.
               </p>
 
-              {/* Replace Model with Spline */}
-                <div className="mx-auto w-full mt-8 md:ml-0 ml-[-60px]">
-                <Spline scene="https://prod.spline.design/tqfLknVH3p1UIu99/scene.splinecode" />
-                </div>
+               
+                 <div className="mx-auto w-full mt-8 md:ml-0 ml-[-60px]">
+                  
+                    <div className="relative overflow-hidden">
+                    <div className="absolute bottom-4 right-0 bg-black w-[50px] md:w-[220px] h-[40px]" />
+                    <Spline scene="https://prod.spline.design/tqfLknVH3p1UIu99/scene.splinecode" />
+                    </div>
+                
+                </div> 
+
+
+
+           
+
+              
+
+
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">

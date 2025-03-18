@@ -32,29 +32,3 @@
 .prize-card-glow{
   box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, .1), 0 2px 40px 10px rgba(154, 170, 255, .05), 0 0 16px -7px rgba(154, 170, 255, .05);
 }
-
-.watermark,
-.watermark_trial,
-.watermark.watermark_trial {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  z-index: -1 !important;
-}
-
-img.trial_logo {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  z-index: -1 !important;
-}
-
-img[src="https://app.vectary.com/studio-lite/assets/watermark.svg"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-spline-viewer ::shadow .watermark {
-  display: none !important;
-}
