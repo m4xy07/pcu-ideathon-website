@@ -2,35 +2,38 @@
 import LogoIcon from "../assets/Ideathon_Logo_White.png";
 import MenuIcon from "@/assets/icon-menu.svg";
 import Buttonmain from "@/components/Buttonmain";
+import Image from "next/image";
 import { Link } from "react-scroll";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerBody,
-  DrawerFooter,
-} from "@heroui/drawer";
 
-import {
-  useDisclosure,
-  Button,
-} from "@heroui/react";
+import { twMerge } from "tailwind-merge";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+
+const navLinks = [
+  {label: "Home", href: "#Home"},
+  {label: "Themes", href: "#Themes"},
+  {label: "Prizes", href: "#Prizes"},
+
+];
+
+
 
 export const Header = () => {
   
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (<header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
     <div className="absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
     <div className="container">
-      <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto relative">
+      <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-3xl mx-auto relative">
       <div className="absolute inset-0 backdrop-blur -z-10 hidden md:block"></div>
-        <div>
-          <div className=" h-[3rem] w-fit inline-flex justify-center items-center ">
-          <img src={LogoIcon.src} className="h-full w-full" />
-          </div>
+
+        <div className="justify-left flex">
+          <Image src={LogoIcon} alt="Ideathon Logo" className='h-9 md:h-[40px] w-auto'/>
         </div>
-        <div className="hidden md:block">
+          
+
+        <div className="hidden md:flex justify-center">
 
         <nav className="flex gap-8 text-sm">
             <Link to="Home" spy={true} smooth={true} offset={50} duration={200} className="text-white/70 hover:text-white transition" style={{cursor:'pointer'}}>Home</Link>
@@ -39,44 +42,48 @@ export const Header = () => {
           </nav>
           
         </div>
-        <div className="flex gap-4 items-center">
+
+        <div className='flex justify-end'>
+          <svg 
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f8f8f8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-menu md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <line x1="3" y1="6" x2="21" y2="6" className={twMerge(
+            "origin-left transition",
+            isOpen && 'rotate-45 -translate-y-1')}></line>
+          <line 
+          x1="3" 
+          y1="12" 
+          x2="21"
+          y2="12" 
+          className={twMerge("transition", isOpen && "opacity-0")}
+          ></line>
+          <line x1="3" y1="18" x2="21" y2="18" className={twMerge(
+            "origin-left transition",
+            isOpen && '-rotate-45 translate-y-1')}></line>
+          </svg>
           <Buttonmain href='https://unstop.com/p/ideathon-20-2025-pimpri-chinchwad-university-maharashtra-1433066?lb=9PcWzBfl'>Register</Buttonmain>
-          <Button className="md:hidden" onPress={onOpen}><MenuIcon  /></Button>
-          
-          <Drawer isOpen={isOpen} onOpenChange={onOpenChange}>
-          <DrawerContent>
-            {(onClose) => (
-            <>
-              <DrawerHeader className="flex flex-col gap-1 text-white">Drawer Title</DrawerHeader>
-              <DrawerBody>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                  risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                  quam.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                  risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                  quam.
-                </p>
-                <p>
-                  Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit dolor
-                  adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. Velit duis sit
-                  officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. Et mollit incididunt
-                  nisi consectetur esse laborum eiusmod pariatur proident Lorem eiusmod et. Culpa
-                  deserunt nostrud ad veniam.
-                </p>
-              </DrawerBody>
-              <DrawerFooter>
-                
-              </DrawerFooter>
-            </>
-          )}
-        </DrawerContent>
-      </Drawer>
         </div>
       </div>
-    </div>
+      <AnimatePresence>
+      {isOpen && (
+        <motion.div 
+          initial = {{height: 0}}
+          animate = {{height: "auto"}}
+          exit = {{height: 0}}
+        className=' overflow-hidden'>
+          <div className='flex flex-col items-center gap-4 py-4'>
+        {navLinks.map(link => (
+          <a href={link.href} key={link.label} className='text-opacity-60 text-white hover:text-opacity-100 transition'>
+            {link.label}
+          </a>
+        ))}
+        <Buttonmain href='https://unstop.com/p/ideathon-20-2025-pimpri-chinchwad-university-maharashtra-1433066?lb=9PcWzBfl'>Register</Buttonmain>
+        </div>
+      </motion.div>
+      )}
+      </AnimatePresence>
+      </div>
+
+
   </header>
   );
 };
