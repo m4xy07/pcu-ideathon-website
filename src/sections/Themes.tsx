@@ -27,9 +27,9 @@ const Team = () => {
               </p>
 
               {/* Replace Model with Spline */}
-              <div className="mx-auto w-full mt-8">
+                <div className="mx-auto w-full mt-8 md:ml-0 ml-[-60px]">
                 <Spline scene="https://prod.spline.design/tqfLknVH3p1UIu99/scene.splinecode" />
-              </div>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
