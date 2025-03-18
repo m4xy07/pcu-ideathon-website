@@ -36,7 +36,7 @@ export const Hero = () => {
         >
           <div className="gap-0">
           <h1 className="text-5xl md:text-[48px] font-semibold text-white custom-hero-title-shadow">
-          PCU's
+          PCU&apos;s
           </h1>
           <h1 className="text-5xl md:text-[72px] font-semibold text-white custom-hero-title-shadow">
             Ideathon 2.0
@@ -46,7 +46,7 @@ export const Hero = () => {
           </h1>
           </div>
           <p className="text-lg md:text-xl text-white tracking-[0.2px] mt-5 max-w-xl custom-text-shadow">
-            PCU's Ideathon 2.0 is a platform for students to showcase their innovative ideas and solutions to real-world problems.
+            PCU&apos;s Ideathon 2.0 is a platform for students to showcase their innovative ideas and solutions to real-world problems.
           </p>
           <div className="pt-16">
             <ModernAnimatedButtonVariant1 />
