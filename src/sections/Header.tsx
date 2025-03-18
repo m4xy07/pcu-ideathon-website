@@ -28,7 +28,7 @@ export const Header = () => {
       <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-3xl mx-auto relative">
       <div className="absolute inset-0 backdrop-blur -z-10 hidden md:block"></div>
 
-        <div className="justify-left flex">
+        <div className="justify-left flex w-[103px]">
           <Image src={LogoIcon} alt="Ideathon Logo" className='h-9 md:h-[40px] w-auto'/>
         </div>
           

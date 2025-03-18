@@ -14,8 +14,8 @@ import {
       >
         <AccordionItem value="getting-started" className="py-6">
           <AccordionTrigger className="w-full text-left text-zinc-950 dark:text-zinc-50 group">
-            <div className="flex items-center text-[18px] justify-between">
-              <div>Phase 1: Suggestion & Feedback (First 4 Hours)</div>
+            <div className="flex items-center text-[16px] md:text-[18px] justify-between">
+              <div>Phase 1: Suggestion & Feedback</div>
               <ChevronUp className="chevron h-4 w-4 text-zinc-950 transition-transform duration-200 group-[data-expanded]:rotate-180 dark:text-zinc-50" />
             </div>
           </AccordionTrigger>
@@ -37,8 +37,8 @@ import {
   
         <AccordionItem value="animation-properties" className="py-6">
           <AccordionTrigger className="w-full text-left text-zinc-950 dark:text-zinc-50 group">
-            <div className="flex items-center text-[18px] justify-between">
-              <div>Phase 2: Midway Evaluation (After 20 Hours)</div>
+            <div className="flex items-center text-[16px] md:text-[18px] justify-between">
+              <div>Phase 2: Midway Evaluation </div>
               <ChevronUp className="chevron h-4 w-4 text-zinc-950 transition-transform duration-200 group-[data-expanded]:rotate-180 dark:text-zinc-50" />
             </div>
           </AccordionTrigger>
@@ -55,8 +55,8 @@ import {
   
         <AccordionItem value="advanced-usage" className="py-6">
           <AccordionTrigger className="w-full text-left text-zinc-950 dark:text-zinc-50 group">
-            <div className="flex items-center text-[18px] justify-between">
-              <div>Phase 3: Final Judging & Pitch (After 22 Hours)</div>
+            <div className="flex items-center text-[16px] md:text-[18px] justify-between">
+              <div>Phase 3: Final Judging & Pitch </div>
               <ChevronUp className="chevron h-4 w-4 text-zinc-950 transition-transform duration-200 group-[data-expanded]:rotate-180 dark:text-zinc-50" />
             </div>
           </AccordionTrigger>

@@ -38,13 +38,6 @@ const Team = () => {
                 
                 </div> 
 
-
-
-           
-
-              
-
-
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -55,7 +48,7 @@ const Team = () => {
                 <h3 className="text-lg md:text-[20px] font-medium tracking-[0.2px] mt-4">
                   Sustainability & Environment
                 </h3>
-                <p className="text-[#9c9c9d] mt-4 text-lg leading-tight font-medium tracking-[0.2px]">
+                <p className="text-[#9c9c9d] mt-4 text-base leading-tight font-medium tracking-[0.2px]">
                   Build solutions for a greener tomorrow tackling climate
                   change, pollution, and agricultural issues.
                 </p>
@@ -67,7 +60,7 @@ const Team = () => {
                 <h3 className="text-lg md:text-[20px] font-medium tracking-[0.2px] mt-4">
                   Healthcare & Well-being
                 </h3>
-                <p className="text-[#9c9c9d] mt-4 text-lg leading-tight font-medium tracking-[0.2px]">
+                <p className="text-[#9c9c9d] mt-4 text-base leading-tight font-medium tracking-[0.2px]">
                   Innovate for better healthcare solutions, mental health, and
                   overall well-being of individuals.
                 </p>
@@ -79,7 +72,7 @@ const Team = () => {
                 <h3 className="text-lg md:text-[20px] font-medium tracking-[0.2px] mt-4">
                   AI and Technology
                 </h3>
-                <p className="text-[#9c9c9d] mt-4 text-lg leading-tight font-medium tracking-[0.2px]">
+                <p className="text-[#9c9c9d] mt-4 text-base leading-tight font-medium tracking-[0.2px]">
                   Leverage AI and technology to build innovative solutions for
                   real-world problems.
                 </p>
@@ -91,7 +84,7 @@ const Team = () => {
                 <h3 className="text-lg md:text-[20px] font-medium tracking-[0.2px] mt-4">
                   Education and Learning
                 </h3>
-                <p className="text-[#9c9c9d] mt-4 text-lg leading-tight font-medium tracking-[0.2px]">
+                <p className="text-[#9c9c9d] mt-4 text-base leading-tight font-medium tracking-[0.2px]">
                   Enhance Learning experiences with tech driven tools for
                   accessibility, engagement, and effectiveness.
                 </p>
@@ -103,7 +96,7 @@ const Team = () => {
                 <h3 className="text-lg md:text-[20px] font-medium tracking-[0.2px] mt-4">
                   Smart & Urban Development
                 </h3>
-                <p className="text-[#9c9c9d] mt-4 text-lg leading-tight font-medium tracking-[0.2px]">
+                <p className="text-[#9c9c9d] mt-4 text-base leading-tight font-medium tracking-[0.2px]">
                   Develop solutions for smart cities and urban development to
                   improve quality of life and sustainability.
                 </p>
@@ -115,7 +108,7 @@ const Team = () => {
                 <h3 className="text-lg md:text-[20px] font-medium tracking-[0.2px] mt-4">
                   Social Impact
                 </h3>
-                <p className="text-[#9c9c9d] mt-4 text-lg  leading-tight font-medium tracking-[0.2px]">
+                <p className="text-[#9c9c9d] mt-4 text-base  leading-tight font-medium tracking-[0.2px]">
                   Design Solutions that promote diversity, equity, and
                   inclusion, and create a positive social impact.
                 </p>
