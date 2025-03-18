@@ -1,6 +1,7 @@
 {
-  "name": "ai-startup-landing-page",
+  "name": "pcu-ideathon",
   "version": "0.1.0",
+  "author": {"name": "Aman Shaikh"},
   "private": true,
   "scripts": {
     "dev": "next dev",

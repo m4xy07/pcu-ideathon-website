@@ -6,8 +6,8 @@ import { twMerge } from "tailwind-merge";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EcoCred",
-  description: "A landing page for an AI startup created with Frontend Tribe",
+  title: "PCU's Ideathon",
+  description: "PCU's Ideathon 2.0 - 2K25",
 };
 
 export default function RootLayout({
@@ -17,10 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={twMerge(inter.className, "bg-black text-white antialiased")}>
+      <body
+        className={twMerge(inter.className, "bg-black text-white antialiased")}
+      >
         {children}
-        </body>
-      
+      </body>
     </html>
   );
 }
