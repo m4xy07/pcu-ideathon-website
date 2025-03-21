@@ -13,9 +13,15 @@ export const Footer = () => {
         
       </div>  
       <div className="flex gap-5 md:flex-1 md:justify-end justify-center">
+        <Link href="https://x.com/PCUPuneOfficial">
         <XSocial className="text-white/40 hover:text-white transition" />
+        </Link>
+        <Link href="https://www.instagram.com/pcupuneofficial/">
         <InstaSocial className="text-white/40 hover:text-white transition" />
+        </Link>
+        <Link href="https://www.youtube.com/@pcupuneofficial">
         <YTSocial className="text-white/40 hover:text-white transition" />
+        </Link>
       </div>
       </div>
     </div>
