@@ -27,6 +27,19 @@ const nextConfig = {
 
     return config;
   },
+
+  images: {
+    unoptimized: true, // Add this line for static exports
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+  distDir: "build",
+  output: "export",
+  trailingSlash: true,
 };
 
 export default nextConfig;
